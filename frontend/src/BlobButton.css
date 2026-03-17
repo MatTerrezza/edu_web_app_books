@@ -1,0 +1,242 @@
+/* BlobButton.css */
+
+.blob-btn {
+  --numOfBlobs: 4;
+  z-index: 1;
+  position: relative;
+  padding: 14px 60px;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  transition: color 0.5s;
+  cursor: pointer;
+  border-radius: 20px;
+  width: 100%; /* Изменено с auto на 100% */
+  max-width: 380px; /* Максимальная ширина */
+  margin: 10px auto; /* auto по бокам для центрирования */
+  display: block; /* Чтобы margin auto работал */
+}
+
+/* Граница кнопки */
+.blob-btn:before {
+  content: "";
+  z-index: 1;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid;
+  border-radius: 20px;
+  pointer-events: none;
+  box-sizing: border-box; /* Чтобы рамка не увеличивала размер */
+}
+
+/* Эффект при наведении */
+.blob-btn:after {
+  content: "";
+  z-index: -2;
+  position: absolute;
+  left: 3px;
+  top: 3px;
+  width: 100%;
+  height: 100%;
+  transition: all 0.3s 0.2s;
+  border-radius: 30px;
+  box-sizing: border-box;
+}
+
+.blob-btn:hover:after {
+  transition: all 0.3s;
+  left: 0;
+  top: 0;
+  border-radius: 30px;
+}
+
+/* Внутренний контейнер */
+.blob-btn__inner {
+  z-index: -1;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  background: transparent;
+}
+
+/* Контейнер для пузырьков */
+.blob-btn__blobs {
+  position: relative;
+  display: block;
+  height: 100%;
+  filter: url('#goo');
+}
+
+/* Пузырьки */
+.blob-btn__blob {
+  position: absolute;
+  top: 2px;
+  width: 25%;
+  height: 100%;
+  border-radius: 100%;
+  transform: translate3d(0, 150%, 0) scale(1.7);
+  transition: transform 0.45s;
+}
+
+@supports (filter: url('#goo')) {
+  .blob-btn__blob {
+    transform: translate3d(0, 150%, 0) scale(1.4);
+  }
+}
+
+/* Позиции пузырьков */
+.blob-btn__blob:nth-child(1) {
+  left: 0%;
+  transition-delay: 0s;
+}
+
+.blob-btn__blob:nth-child(2) {
+  left: 30%;
+  transition-delay: 0.08s;
+}
+
+.blob-btn__blob:nth-child(3) {
+  left: 60%;
+  transition-delay: 0.16s;
+}
+
+.blob-btn__blob:nth-child(4) {
+  left: 90%;
+  transition-delay: 0.24s;
+}
+
+/* Анимация при наведении */
+.blob-btn:hover .blob-btn__blob {
+  transform: translateZ(0) scale(1.7);
+}
+
+@supports (filter: url('#goo')) {
+  .blob-btn:hover .blob-btn__blob {
+    transform: translateZ(0) scale(1.4);
+  }
+}
+
+/* ===== ЦВЕТОВЫЕ ВАРИАНТЫ ===== */
+
+/* Primary - фиолетовый */
+.blob-btn-primary {
+  color: #bb86fc;
+}
+
+.blob-btn-primary:before {
+  border-color: #bb86fc;
+}
+
+.blob-btn-primary .blob-btn__blob {
+  background: #bb86fc;
+}
+
+.blob-btn-primary:hover {
+  color: black;
+}
+
+/* Secondary - бирюзовый */
+.blob-btn-secondary {
+  color: white;
+}
+
+.blob-btn-secondary:before {
+  border-color: white;
+}
+
+.blob-btn-secondary .blob-btn__blob {
+  background: white;
+}
+
+.blob-btn-secondary:hover {
+  color: black;
+}
+
+/* Danger - красный */
+.blob-btn-danger {
+  color: #cf6679;
+}
+
+.blob-btn-danger:before {
+  border-color: #cf6679;
+}
+
+.blob-btn-danger .blob-btn__blob {
+  background: #cf6679;
+}
+
+.blob-btn-danger:hover {
+  color: black;
+}
+
+/* Success - зеленый */
+.blob-btn-success {
+  color: #4caf50;
+}
+
+.blob-btn-success:before {
+  border-color: #4caf50;
+}
+
+.blob-btn-success .blob-btn__blob {
+  background: #4caf50;
+}
+
+.blob-btn-success:hover {
+  color: black;
+}
+
+/* Белый вариант */
+.blob-btn-white {
+  color: white;
+}
+
+.blob-btn-white:before {
+  border-color: white;
+}
+
+.blob-btn-white .blob-btn__blob {
+  background: white;
+}
+
+.blob-btn-white:hover {
+  color: black;
+}
+
+/* Контейнер для группы кнопок (если нужно выровнять несколько кнопок) */
+.button-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 10px;
+}
+
+/* Для мобильных устройств */
+@media (max-width: 768px) {
+  .blob-btn {
+    padding: 14px 30px;
+    max-width: 240px;
+    font-size: 14px;
+  }
+}
+
+/* Для очень маленьких экранов */
+@media (max-width: 480px) {
+  .blob-btn {
+    padding: 12px 20px;
+    max-width: 200px;
+    font-size: 13px;
+  }
+}

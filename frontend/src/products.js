@@ -1,0 +1,75 @@
+const products = [
+  { 
+    id: 1, 
+    name: "Brohm Lake", 
+    price: "1000 ₽", 
+    image: "/images/1.jpg",
+    backImage: "/images/1-1.png",
+  },
+{ 
+  id: 2, 
+  name: "Гарри Поттер и тайная комната", 
+  price: "2000 ₽", 
+  image: "/images/2.jpg",
+  backImage: "/images/2-1.png",
+  about: "Гарри Поттер проводит лето у Дурслей, с нетерпением ожидая начала нового учебного года в Хогвартсе. Но на его день рождения является странный гость — домовой эльф Добби, который предупреждает Гарри, что в школе его ждет смертельная опасность, и он должен обещать не возвращаться туда. Несмотря на предупреждение, Гарри вместе с Роном отправляются в школу на летучем фордике. В Хогвартсе начинают происходить странные события: кто-то нападает на учеников, и все улики указывают на то, что это делает наследник Слизерина с помощью чудовища, скрытого в Тайной комнате. Гарри, Рон и Гермиона пытаются разгадать тайну и найти виновного, прежде чем школа закроется навсегда.",
+},
+  { 
+    id: 3, 
+    name: "Лесной массив", 
+    price: "1500 ₽", 
+    image: "/images/3.jpg",
+    backImage: "/images/3-back.jpg",
+  },
+  { 
+    id: 4, 
+    name: "Горный пик", 
+    price: "3000 ₽", 
+    image: "/images/4.jpg",
+    backImage: "/images/4-1.jpg",
+  },
+  { 
+    id: 5, 
+    name: "Альпийские луга", 
+    price: "2500 ₽", 
+    image: "/images/5.jpg",
+    backImage: "/images/5-1.jpg",
+  },
+  { 
+    id: 6, 
+    name: "Горная река", 
+    price: "1800 ₽", 
+    image: "https://images.unsplash.com/photo-1545436864-cd9bdd1ddebc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+    backImage: "https://images.unsplash.com/photo-1545436864-cd9bdd1ddebc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+  },
+    { 
+    id: 7, 
+    name: "Горная река", 
+    price: "1800 ₽", 
+    image: "https://images.unsplash.com/photo-1545436864-cd9bdd1ddebc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+    backImage: "https://images.unsplash.com/photo-1545436864-cd9bdd1ddebc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+  },
+    { 
+    id: 8, 
+    name: "Горная река", 
+    price: "1800 ₽", 
+    image: "https://images.unsplash.com/photo-1545436864-cd9bdd1ddebc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+    backImage: "https://images.unsplash.com/photo-1545436864-cd9bdd1ddebc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+  },
+    { 
+    id: 9, 
+    name: "Горная река", 
+    price: "1800 ₽", 
+    image: "https://images.unsplash.com/photo-1545436864-cd9bdd1ddebc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+    backImage: "https://images.unsplash.com/photo-1545436864-cd9bdd1ddebc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+  },
+    { 
+    id: 10, 
+    name: "Горная река", 
+    price: "1800 ₽", 
+    image: "https://images.unsplash.com/photo-1545436864-cd9bdd1ddebc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+    backImage: "https://images.unsplash.com/photo-1545436864-cd9bdd1ddebc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60",
+  },  
+];
+
+export default products;
